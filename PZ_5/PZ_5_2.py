@@ -22,4 +22,4 @@ C,D = Swap(C,D)
 print(Swap(B,C))
 B,C = Swap(B,C)
 
-print(A,B,C,D)
+print(A,B,C,D) # Вывод измёненных значений
