@@ -9,6 +9,6 @@ P=A+A+B+B
 S=C+C+C+C
 I=0
 while P >= S+4:
-P-=S
-I+=1
+    P -=S
+    I+=1
 print(I)
