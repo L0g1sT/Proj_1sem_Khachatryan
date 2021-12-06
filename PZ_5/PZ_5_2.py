@@ -4,22 +4,23 @@
 # Содержимое следующих пар: A и В, С и D, B и C и вывести новые значения
 # A,B,C,D.
 
-def Swap(X,Y): #Создание функции с формальными переменными
-    Y,X = X,Y
-    return X,Y
+def swap(x, y):  # Создание функции с формальными переменными
+    x, y = x, y
+    return x, y
 
-A = int(input("Введите число A: ")) #Создание переменных
-B = int(input("Введите число B: "))
-C = int(input("Введите число C: "))
-D = int(input("Введите число D: "))
 
-print(Swap(A,B)) # Использование функции уже с фактическими переменными
-A,B = Swap(A,B)
+a = int(input("Введите число A: "))  # Создание переменных
+b = int(input("Введите число B: "))
+c = int(input("Введите число C: "))
+d = int(input("Введите число D: "))
 
-print(Swap(C,D))
-C,D = Swap(C,D)
+print(swap(a, b))  # Использование функции уже с фактическими переменными
+a, b = swap(a, b)
 
-print(Swap(B,C))
-B,C = Swap(B,C)
+print(swap(c, d))
+c, d = swap(c, d)
 
-print(A,B,C,D) # Вывод измёненных значений
+print(swap(b, c))
+b, c = swap(b, c)
+
+print(a, b, c, d)  # Вывод измёненных значений

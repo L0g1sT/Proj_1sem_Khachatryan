@@ -5,22 +5,21 @@
 
 import random
 
-N=int(input("Введите размер списка A: "))
-A=[] #Создание списка
-t=0
-B=[] #Создание списка
+n = int(input("Введите размер списка A: "))
+a = []  # Создание списка
+t = 0
+b = []  # Создание списка
 
-while t < N:
-    A.append(random.randint(0,100)) #Создание элементов списка
+while t < n:
+    a.append(random.randint(0, 100))  # Создание элементов списка
     t += 1
-print(A)
+print(a)
 
-for i in range (2):
-    while i % 2 == 0 and i < N: #Сортировка списка (Сначала чётные индекс, затем нечётный)
-        B.append(A[i])
-        i+=2
-    while i % 2 != 0 and i < N:
-        B.append(A[i])
-        i+=2
-
-print(B)
+for i in range(2):
+    while i % 2 == 0 and i < n:  # Сортировка списка (Сначала чётные индекс, затем нечётный)
+        b.append(a[i])
+        i += 2
+    while i % 2 != 0 and i < n:
+        b.append(a[i])
+        i += 2
+print(b)

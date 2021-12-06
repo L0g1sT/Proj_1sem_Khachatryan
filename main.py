@@ -1,16 +1,21 @@
-# This is a sample Python script.
 
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
+from random import randint
 
+n = int(input('Введите размер списка:'))
+lst = [randint(0, 50) for i in range(n)]
+ls = []
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
+n -= 1
+print(lst)
 
+hlp = round((lst[1] + lst[0]) / 2, 1)
+ls.insert(0, hlp)
 
-# Press the green button in the gutter to run the script.
-if __name__ == '__main__':
-    print_hi('PyCharm')
+for i in range(n+1):
+    if i < n and i != 0:
+        hlp = round((lst[i]+lst[i-1]+lst[i+1])/3, 1)
+        ls.insert(i+1, hlp)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+hlp = round((lst[n-1] + lst[n]) / 2, 1)
+ls.insert(n, hlp)
+print(ls)

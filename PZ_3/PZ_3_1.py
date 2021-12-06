@@ -10,6 +10,7 @@ while type(x) != float:    # Обработка исключений
     except ValueError:
         print("Введено не число!")
         x = input("Введите число x:  ")
+
 y = input('Введите число y: ')
 while type(y) != float:    # Обработка исключений
     try:
@@ -17,6 +18,7 @@ while type(y) != float:    # Обработка исключений
     except ValueError:
         print("Введено не число!")
         y = input("Введите число y:  ")
+
 x1 = input('Введите число x1: ')
 while type(x1) != float:    # Обработка исключений
     try:
@@ -24,6 +26,7 @@ while type(x1) != float:    # Обработка исключений
     except ValueError:
         print("Введено не число!")
         x1 = input("Введите число x1:  ")
+
 y1 = input('Введите число y1: ')
 while type(y1) != float:    # Обработка исключений
     try:
@@ -31,6 +34,7 @@ while type(y1) != float:    # Обработка исключений
     except ValueError:
         print("Введено не число!")
         y1 = input("Введите число y1:  ")
+
 x2 = input('Введите число x2: ')
 while type(x2) != float:    # Обработка исключений
     try:
@@ -38,6 +42,7 @@ while type(x2) != float:    # Обработка исключений
     except ValueError:
         print("Введено не число!")
         x2 = input("Введите число x2:  ")
+
 y2 = input('Введите число y2: ')
 while type(y2) != float:    # Обработка исключений
     try:
@@ -46,7 +51,7 @@ while type(y2) != float:    # Обработка исключений
         print("Введено не число!")
         y2 = input("Введите число y2: ")
 
-if (x2 > x > x1) and (y2 < y < y1) and (x1 < x2) and (y1 > y2) :
+if (x2 > x > x1) and (y2 < y < y1) and (x1 < x2) and (y1 > y2):
     print("Высказывание истинное!")
 else:
     print("Высказываение ложное!")
