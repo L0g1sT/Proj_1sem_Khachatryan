@@ -1,21 +1,16 @@
 
-from random import randint
+import random
 
-n = int(input('Введите размер списка:'))
-lst = [randint(0, 50) for i in range(n)]
-ls = []
+N = int(input("Введите размер списка A: "))
+A = [] #Создание списка
+t = 0
+B = [] #Создание списка
 
-n -= 1
-print(lst)
-
-hlp = round((lst[1] + lst[0]) / 2, 1)
-ls.insert(0, hlp)
-
-for i in range(n+1):
-    if i < n and i != 0:
-        hlp = round((lst[i]+lst[i-1]+lst[i+1])/3, 1)
-        ls.insert(i+1, hlp)
-
-hlp = round((lst[n-1] + lst[n]) / 2, 1)
-ls.insert(n, hlp)
-print(ls)
+while t < N:
+    A.append(random.randint(-100, 100))  # Создание элементов списка
+    t += 1
+print(A)
+for i in range(N-1):
+    if i % 2 == 0:
+        B.append(A[i])
+print(B)

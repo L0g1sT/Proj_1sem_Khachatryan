@@ -1,27 +1,43 @@
-# Дан список A размера N и целое число K (1<K<N).Преобразовать список,
-# увеличив каждый его элемент на исходное значение Элемента Ak
+# Дана строка-предложение на русском языке и число K (0 < K < 10). Зашифровать
+# строку, выполнив циклическую замену каждой буквы на букву того же регистра,
+# расположенную в алфавите на K-й позиции после шифруемой буквы (например, для
+# K = 2 «А» перейдет в «В», «а» — в «в», «Б» — в «Г», «я» — в «б» и т. д.). Букву «ё»
+# в алфавите не учитывать, знаки препинания и пробелы не изменять.
 
-import random
+A = input("Введите слово или предложение: ")
+K = int(input("Введите число: "))
+i = "абвгдежзийклмнопрстуфхцчшщъыьэюя"
+l = i.swapcase()
+while (K < 0) or (K > 10):
+    print("Число не соответствует условию")
+    K = int(input("Введите число: "))
 
-N = int(input("Введите размер списка A: "))
+A1 = []
 
-A = []
+for p in range(len(A)):
+    A1.append(A[p])
+
+for p in range(len(A)):
+    for a in range(len(i)):
+        if a >= len(i)-K+1:
+            if A1[p] in i[a] or A1[p] in l[a]:
+                if A1[p].isupper():
+                    A1[p] = i[a + K - a].capitalize()
+                    break
+                else:
+                    A1[p] = i[a + K - a]
+                    break
+        else:
+            if A1[p] in i[a] or A1[p] in l[a]:
+                if A1[p].isupper():
+                    A1[p] = i[a + K + 1].capitalize()
+                    break
+                else:
+                    A1[p] = i[a + K + 1]
+                    break
 t = 0
-while t<N:
-    A.append(random.randint(0,100))
-    t+=1
-
-print(A)
-N = int((random.randint((0),(N-2))))
-
-t = A.pop(N)
-A.sort(reverse=True)
-A.insert(N,t)
-print(A)
-
-for i in range(N):
-    if A[N] <= A[i] and A[N] >= A[i+1]:
-        A.insert(i,A[N])
-        A.__delitem__(N+1)
-
-print(A)
+while t < len(A)-1:
+    A1[0] += A1[1]
+    del A1[1]
+    t += 1
+print(A1[0])
