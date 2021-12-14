@@ -5,4 +5,4 @@ k = sorted(d, reverse=True)
 for i in range(len(d)):
     d1.update({k[i]: 3-i})
 print(d1)
-# Я не совсем понял условие. Надеюсь, что решил правильно
+
