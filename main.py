@@ -1,16 +1,19 @@
 
 import random
+n = int(input("Введите размер списка A: "))
 
-N = int(input("Введите размер списка A: "))
-A = [] #Создание списка
+a = []  # Создание списка
+b = []
 t = 0
-B = [] #Создание списка
-
-while t < N:
-    A.append(random.randint(-100, 100))  # Создание элементов списка
+s = 0
+while t < n:
+    a.append(random.randint(0, 100))  # Создание элементов списка
     t += 1
-print(A)
-for i in range(N-1):
-    if i % 2 == 0:
-        B.append(A[i])
-print(B)
+print(a)
+for i in range(len(a)):
+    s = 0
+    for p in range(i, len(a)):
+        s += a[p]
+    s /= len(a)-i
+    b.append(round(s))
+print(b)

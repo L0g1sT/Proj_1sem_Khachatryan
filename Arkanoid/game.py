@@ -1,6 +1,6 @@
-import pgzrun
-import pygame
+
 import random
+import pgzrun
 
 TITLE = "Arkanoid"
 WIDTH = 800
@@ -30,15 +30,6 @@ coloured_box_list = ["brickbg.png", "brickgg.png", "brickpr.png"]
 x = 120
 y = 100
 
-font_name = pygame.font.match_font('arial')
-
-
-def draw_text(surf, text, size, x, y):
-    font = pygame.font.Font(font_name, size)
-    text_surface = font.render(text, True, BLACK)
-    text_rect = text_surface.get_rect()
-    text_rect.midtop = (x, y)
-    surf.blit(text_surface, text_rect)
 
 def draw():
     screen.blit("background.png", (0, 0))
@@ -104,9 +95,6 @@ def update_ball():
         x = 120
         y = 100
         bars_list.clear()
-        global score
-        scr = score
-        draw_text(screen, str(scr), 18, WIDTH / 2, 10)
         for i in range(3):
             place_bars(x, y, coloured_box_list[i])
             y += 50
