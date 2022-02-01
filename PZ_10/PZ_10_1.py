@@ -15,14 +15,14 @@ a = []
 b = []
 
 f1 = open("file1.txt", "w", encoding="UTF-8")
-for i in range(random.randint(10, 20)):
+for i in range(10):
     a.append(random.randint(0, 10))
     f1.write(str(a[i]))
     f1.write(" ")
 f1.close()  # Мы создали список из положительных "рандомных" цифр и заполнили ими файл
 
 f2 = open("file2.txt", "w", encoding="UTF-8")
-for i in range(random.randint(10, 20)):
+for i in range(10):
     b.append(random.randint(-10, -1))
     f2.write(str(b[i]))
     f2.write(" ")
