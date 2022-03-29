@@ -9,8 +9,9 @@ with open('hotline_1.txt', 'r', encoding='utf-8') as file:
     text = file.read()
 
 print(p.findall(text))
-print(len(p.findall(text)))
-f1 = open("hotline_2.txt", "w", encoding="UTF-8")
+print("Количество номеров соотвествующих шаблону: ", len(p.findall(text)))
+
 with open("hotline_2.txt", "w", encoding="UTF-8") as file:
     text = re.sub("«Горячая линия»", "«Министерства образования Ростовской области»", text)
-    f1.write(text)
+    file.write(text)
+    
